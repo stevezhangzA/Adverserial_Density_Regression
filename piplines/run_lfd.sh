@@ -1,11 +1,11 @@
 wandb disabled
 CUDA_VISIBLE_DEVICES=$1 python imitation_learning.py --log_saving_dir $2 \
-													 --project_name $3 \
-	                                             	 --lambd $4 \
-													 --topk $5 \
-													 --seed $6 \
-													 --env $7 \
-    												 --expert_data $8 \
+						     --project_name $3 \
+	                                             --lambd $4 \
+						     --topk $5 \
+						     --seed $6 \
+						     --env $7 \
+						     --expert_data $8 \
 
 
 #sh piplines/run_lfd.sh 0 lfd hopper_m 1 20 0 hopper-medium-v2 hopper-expert-v2 
