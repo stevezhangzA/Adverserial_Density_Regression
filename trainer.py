@@ -220,8 +220,6 @@ class adverseial_density:
         state, action, _, _, _ = batch
         # Variational Auto-Encoder Training
         recon, mean, std = self.vae_bad(state, action)
-
-        
         recon_loss = F.mse_loss(recon, action)
         KL_loss = -0.5 * (1 + torch.log(std.pow(2)) - mean.pow(2) - std.pow(2)).mean()
         vae_loss = recon_loss + self.beta * KL_loss
@@ -249,8 +247,6 @@ class adverseial_density:
         log_dict["VAE/KL_loss"] = KL_loss.item()
         log_dict["VAE/vae_loss"] = vae_loss.item()
         return log_dict
-
-
     def vqvae_bad_train(self, batch: TensorBatch) -> Dict[str, float]:
         log_dict = {}
         self.total_it += 1
@@ -300,24 +296,19 @@ class adverseial_density:
             pi = self.actor(state)
             with torch.no_grad():
                 # estimate the expert liklihood
-                neg_log_beta_good = self.vae_good.importance_sampling_estimator(state, action, self.beta,
-                                                                                self.num_samples)
+                neg_log_beta_good = self.vae_good.importance_sampling_estimator(state, action, self.beta, self.num_samples)
                 # estimate the non-expert liklihood
-                neg_log_beta_bad = self.vae_bad.importance_sampling_estimator(state, action, self.beta,
-                                                                              self.num_samples)
+                neg_log_beta_bad = self.vae_bad.importance_sampling_estimator(state, action, self.beta, self.num_samples)
                 # computing the density weight
                 neg_log_beta = neg_log_beta_bad - neg_log_beta_good
                 if self.lambd_cool:
                     lambd = self.lambd * max(self.lambd_end, (1.0 - self.online_it / self.max_online_steps))
                 else:
                     lambd = self.lambd
-            # actor_loss= |\pi(\cdot|s)-a|*log P(suboptimal action|s)-log P(expert action|s)
-            # reduction="none"
-            actor_loss = torch.nn.MSELoss()(pi, action) * lambd * neg_log_beta.mean() # upper bound
-            #actor_loss = (torch.nn.MSELoss(reduction="none")(pi, action) * lambd * neg_log_beta.view(64,1)).sum() # lower bound
+            actor_loss = (torch.nn.MSELoss(reduction="none")(pi, action) * lambd * neg_log_beta.view(64,1)).sum()
+            #actor_loss = torch.nn.MSELoss()(pi, action) * lambd * neg_log_beta.mean() # upper bound
             log_dict["actor_loss"] = actor_loss.item()
             log_dict["neg_log_beta_mean"] = neg_log_beta.mean().item()
-            #log_dict["neg_log_beta_max"] = neg_log_beta.max().item()
             log_dict["lambd"] = lambd
             self.actor_optimizer.zero_grad()
             actor_loss.backward()
