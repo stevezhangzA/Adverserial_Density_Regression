@@ -1,7 +1,5 @@
 # The official Implementation of Adverserial Densisty Regression [Paper Link](https://arxiv.org/abs/2405.20351)
 
-Official Implementation of Adverserial Densisty Regression Behavior Cloning
-
 If you chose to utilize our code base please cite below:
 
 ''''''
