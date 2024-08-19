@@ -4,8 +4,6 @@ from modules import *
 from trainer import *
 from tensorboardX import SummaryWriter
 
-
-
 @pyrallis.wrap()
 def train(config: TrainConfig):
     unnormalized_return = []
