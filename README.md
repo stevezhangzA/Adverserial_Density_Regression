@@ -1,5 +1,6 @@
-# The Official Implementation of Adverserial Densisty Weighted Regression Behavior Cloning [Paper Link](https://arxiv.org/abs/2405.20351)
+# Adverserial Densisty Weighted Regression Behavior Cloning [Paper Link](https://arxiv.org/abs/2405.20351)
 
+Description: The Official Implementation of Adverserial Densisty Weighted Regression Behavior Cloning
 
 ## Configurations
 
