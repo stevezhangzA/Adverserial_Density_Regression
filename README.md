@@ -21,8 +21,11 @@ sh piplines/run_lfd_vq_reward_spares.sh
 python build_table.py --folder_name 'lfd_1_vq'
 ```
 
-
 Besides, if you chose to utilize our code base please cite below:
+
+### Raw experimental data
+
+We have released our loggings at 'lfd_1_vq'
 
 ```
 @{zhang2024adrbcadversarialdensityweighted,
