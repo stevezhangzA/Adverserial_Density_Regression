@@ -11,8 +11,8 @@ we provide code cases for reproducing our experimental results in Androits domai
 """
 # for obtaining our loggings
 sh piplines/run_lfd_vq_reward_spares.sh
-# for obtaining the mean and confidence intervals
-python 
+# for obtaining the mean and confidence intervals 
+python build_table.py --folder_name 'lfd_1_vq'
 """
 
 Besides, if you chose to utilize our code base please cite below:
