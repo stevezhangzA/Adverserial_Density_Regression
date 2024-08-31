@@ -1,7 +1,21 @@
 # The Official Implementation of Adverserial Densisty Weighted Regression Behavior Cloning [Paper Link](https://arxiv.org/abs/2405.20351)
 
-If you chose to utilize our code base please cite below:
 
+
+
+
+# Examples
+
+we provide code cases for reproducing our experimental results in Androits domain:
+
+'''
+# for obtaining our loggings
+sh piplines/run_lfd_vq_reward_spares.sh
+# for obtaining the mean and confidence intervals
+python 
+'''
+
+Besides, if you chose to utilize our code base please cite below:
 
 ```
 @{zhang2024adrbcadversarialdensityweighted,
@@ -13,3 +27,8 @@ If you chose to utilize our code base please cite below:
       primaryClass={cs.LG},
 }
 ```
+
+
+# Thanks
+
+Our codebase is modified from CORL [Paper Link](https://openreview.net/forum?id=SyAS49bBcv)
