@@ -1,13 +1,6 @@
 # The Official Implementation of Adverserial Densisty Weighted Regression Behavior Cloning [Paper Link](https://arxiv.org/abs/2405.20351)
 
 
-
-
-
-# Examples
-
-we provide code cases for reproducing our experimental results in Androits domain:
-
 ## Configuration and experiment
 Dependent:
 requirement  | version | 
