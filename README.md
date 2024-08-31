@@ -8,12 +8,12 @@
 
 we provide code cases for reproducing our experimental results in Androits domain:
 
-'''
+"""
 # for obtaining our loggings
 sh piplines/run_lfd_vq_reward_spares.sh
 # for obtaining the mean and confidence intervals
 python 
-'''
+"""
 
 Besides, if you chose to utilize our code base please cite below:
 
