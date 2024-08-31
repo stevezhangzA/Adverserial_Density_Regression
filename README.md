@@ -8,12 +8,24 @@
 
 we provide code cases for reproducing our experimental results in Androits domain:
 
-"""
+## Configuration and experiment
+Dependent:
+requirement  | version | 
+--------  | ----- |
+python | 3.8 |
+system (platform) | ubuntu/Linux |
+PyTorch | 2.0.0 |
+D4RL | 1.1 |
+Gym| -|
+ 
+### running code & obtain the mean value as well as confidence interval
+```c
 # for obtaining our loggings
 sh piplines/run_lfd_vq_reward_spares.sh
 # for obtaining the mean and confidence intervals 
 python build_table.py --folder_name 'lfd_1_vq'
-"""
+```c
+
 
 Besides, if you chose to utilize our code base please cite below:
 
