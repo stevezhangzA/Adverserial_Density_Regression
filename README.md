@@ -27,6 +27,8 @@ Besides, if you chose to utilize our code base please cite below:
 
 We have released our loggings at 'lfd_1_vq'
 
+### Citations
+
 ```
 @{zhang2024adrbcadversarialdensityweighted,
       title={ADR-BC: Adversarial Density Weighted Regression Behavior Cloning}, 
@@ -42,3 +44,5 @@ We have released our loggings at 'lfd_1_vq'
 # Thanks
 
 Our codebase is modified from CORL [Paper Link](https://openreview.net/forum?id=SyAS49bBcv)
+
+
