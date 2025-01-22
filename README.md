@@ -18,7 +18,7 @@ Gym| -|
 # for obtaining our loggings
 sh piplines/run_lfd_vq_reward_spares.sh
 # for obtaining the mean and confidence intervals 
-python build_table.py --folder_name 'lfd_1_vq'
+python build_table.py
 ```
 
 Besides, if you chose to utilize our code base please cite below:
