@@ -30,13 +30,14 @@ We have released our loggings at 'lfd_1_vq'
 ### Citations
 
 ```
-@{zhang2024adrbcadversarialdensityweighted,
-      title={ADR-BC: Adversarial Density Weighted Regression Behavior Cloning}, 
-      author={Ziqi Zhang and Zifeng Zhuang and Donglin Wang and Jingzehua Xu and Miao Liu and Shuai Zhang},
-      year={2024},
+@misc{zhang2025imitatingauxiliaryimperfectdemonstrations,
+      title={Imitating from auxiliary imperfect demonstrations via Adversarial Density Weighted Regression}, 
+      author={Ziqi Zhang and Zifeng Zhuang and Jingzehua Xu and Yiyuan Yang and Yubo Huang and Donglin Wang and Shuai Zhang},
+      year={2025},
       eprint={2405.20351},
-      journal={arXiv preprint arXiv:2405.20351},
+      archivePrefix={arXiv},
       primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2405.20351}, 
 }
 ```
 
