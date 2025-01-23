@@ -1,6 +1,6 @@
-# Imitating from auxiliary imperfect demonstrations via Adversarial Density Weighted Regression [Paper Link](https://arxiv.org/abs/2405.20351)
-
 Description: The Official Implementation of Imitating from auxiliary imperfect demonstrations via Adversarial Density Weighted Regression
+
+## [Paper Link](https://arxiv.org/abs/2405.20351)
 
 ## Configurations
 
@@ -21,11 +21,11 @@ sh piplines/run_lfd_vq_reward_spares.sh
 python build_table.py
 ```
 
-Besides, if you chose to utilize our code base please cite below:
-
 ### Raw experimental data
 
 We have released our loggings at 'lfd_1_vq'
+
+Besides, if you chose to utilize our code base please cite below:
 
 ### Citations
 
