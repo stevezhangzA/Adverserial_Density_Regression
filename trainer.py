@@ -283,7 +283,7 @@ class adverseial_density:
         log_dict["VAE/vae_loss"] = vae_loss.item()
         return log_dict
 
-    def train(self, batch: TensorBatch) -> Dict[str, float]:
+    def train(self, batch: TensorBatch, upperbound:bool=True) -> Dict[str, float]:
         """
         this is one epoch offline training:
         """
@@ -305,7 +305,10 @@ class adverseial_density:
                     lambd = self.lambd * max(self.lambd_end, (1.0 - self.online_it / self.max_online_steps))
                 else:
                     lambd = self.lambd
-            actor_loss = (torch.nn.MSELoss(reduction="none")(pi, action) * lambd * neg_log_beta.view(64,1)).sum()
+            if upperbound:
+                actor_loss = torch.nn.MSELoss()(pi, action) * lambd * neg_log_beta.mean()
+            else:
+                actor_loss = (torch.nn.MSELoss(reduction="none")(pi, action) * lambd * neg_log_beta.view(64,1)).sum()
             #actor_loss = torch.nn.MSELoss()(pi, action) * lambd * neg_log_beta.mean() # upper bound
             log_dict["actor_loss"] = actor_loss.item()
             log_dict["neg_log_beta_mean"] = neg_log_beta.mean().item()
