@@ -1,4 +1,4 @@
-Description: The Official Implementation of Imitating from auxiliary imperfect demonstrations via Adversarial Density Weighted Regression
+# Description: The Official Implementation of Imitating from auxiliary imperfect demonstrations via Adversarial Density Weighted Regression
 
 ## [Paper Link](https://arxiv.org/abs/2405.20351)
 
